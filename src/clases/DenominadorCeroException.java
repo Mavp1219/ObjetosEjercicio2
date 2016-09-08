@@ -9,6 +9,9 @@ package clases;
  *
  * @author user
  */
-public class DenominadorCeroException {
+public class DenominadorCeroException extends Exception{
+    public DenominadorCeroException(){
+        super ("No se permite el denomnador 0");
+    }
     
 }
