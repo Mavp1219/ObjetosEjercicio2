@@ -10,15 +10,16 @@ package clases;
  * @author user
  */
 public class Mixto {
-    int parte_entera;
-    int numerador;
-    int denominador;
-    
-    public Mixto(int parte_entera, int numerador, int denominador)throws DenominadorCeroException{
-        this.parte_entera= parte_entera;
-        this.numerador=numerador;
-        this.denominador=denominador;
-        if(denominador == 0){
+
+    private int parte_entera;
+    private int numerador;
+    private int denominador;
+
+    public Mixto(int parte_entera, int numerador, int denominador) throws DenominadorCeroException {
+        this.parte_entera = parte_entera;
+        this.numerador = numerador;
+        this.denominador = denominador;
+        if (denominador == 0) {
             throw new DenominadorCeroException();
         }
     }
@@ -47,8 +48,7 @@ public class Mixto {
         this.denominador = denominador;
     }
 
-    
-    public Mixto sumar(Mixto f2) throws DenominadorCeroException{
+    public Mixto sumar(Mixto f2) throws DenominadorCeroException {
         Mixto m;
         int nume1, deno1, nume2, deno2, numefn, denofn, entero, numem, denom;
         nume1 = (this.parte_entera * this.denominador) + this.numerador;
@@ -63,9 +63,8 @@ public class Mixto {
         m = new Mixto(entero, numem, denom);
         return m;
     }
-    
-    
-      public Mixto restar(Mixto f2) throws DenominadorCeroException{
+
+    public Mixto restar(Mixto f2) throws DenominadorCeroException {
         Mixto m;
         int nume1, deno1, nume2, deno2, numefn, denofn, entero, numem, denom;
         nume1 = (this.parte_entera * this.denominador) + this.numerador;
@@ -80,12 +79,11 @@ public class Mixto {
         m = new Mixto(entero, numem, denom);
         return m;
     }
-    
-    
-      public Mixto mulitplicar(Mixto f2) throws DenominadorCeroException {
-         Mixto m;
+
+    public Mixto mulitplicar(Mixto f2) throws DenominadorCeroException {
+        Mixto m;
         int nume1, deno1, nume2, deno2, numefn, denofn, entero, numem, denom;
-        nume1 = (this.parte_entera* this.denominador) + this.numerador;
+        nume1 = (this.parte_entera * this.denominador) + this.numerador;
         deno1 = this.denominador;
         nume2 = (f2.parte_entera * f2.denominador) + f2.numerador;
         deno2 = f2.denominador;
@@ -97,11 +95,11 @@ public class Mixto {
         m = new Mixto(entero, numem, denom);
         return m;
     }
-      
-      public Mixto dividir(Mixto f2) throws DenominadorCeroException {
+
+    public Mixto dividir(Mixto f2) throws DenominadorCeroException {
         Mixto m;
         int nume1, deno1, nume2, deno2, numefn, denofn, entero, numem, denom;
-        nume1 = (this.parte_entera* this.denominador) + this.numerador;
+        nume1 = (this.parte_entera * this.denominador) + this.numerador;
         deno1 = this.denominador;
         nume2 = (f2.parte_entera * f2.denominador) + f2.numerador;
         deno2 = f2.denominador;
@@ -112,5 +110,5 @@ public class Mixto {
         denom = denofn;
         m = new Mixto(entero, numem, denom);
         return m;
-      }
+    }
 }

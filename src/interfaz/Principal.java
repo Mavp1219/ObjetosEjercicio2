@@ -19,6 +19,7 @@ public class Principal extends javax.swing.JFrame {
      */
     public Principal() {
         initComponents();
+        txtentero1.requestFocusInWindow();
     }
 
     /**
@@ -106,6 +107,11 @@ public class Principal extends javax.swing.JFrame {
         jPanel1.add(cmdborrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 200, 100, 30));
 
         cmdlimpiar.setText("Limpiar");
+        cmdlimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmdlimpiarActionPerformed(evt);
+            }
+        });
         jPanel1.add(cmdlimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 240, 100, 30));
         jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, 130, 10));
 
@@ -196,6 +202,21 @@ public class Principal extends javax.swing.JFrame {
    }
 
     }//GEN-LAST:event_cmdborrarActionPerformed
+
+    private void cmdlimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdlimpiarActionPerformed
+     txtentero1.setText("");
+     txtentero2.setText("");
+     txtentero3.setText("");
+     txtnumerador1.setText("");
+     txtnumerador2.setText("");
+     txtnumerador3.setText("");
+     txtdenominador1.setText("");
+     txtdenominador2.setText("");
+     txtdenominador3.setText("");
+     txtentero1.requestFocusInWindow();
+     txtnumerador4.setText("");
+     txtdenominador4.setText("");
+    }//GEN-LAST:event_cmdlimpiarActionPerformed
 
     /**
      * @param args the command line arguments
